@@ -1,0 +1,20 @@
+while True:
+    try:
+        name = input('Enter your name: ')
+        if len(name) > 10 or name[0] != name[0].upper() or name.isdigit() == True :
+            raise Exception
+        print(name)
+        break
+    except Exception:
+        print('name was entered incorrectly')
+while True:
+    try:
+        age = int(input('Enter your age: '))
+        if age < 10 or age > 100:
+            raise Exception
+        print(age)
+        break
+    except Exception:
+        print('age was entered incorrectly')
+    
+print(name,age)
