@@ -1,0 +1,29 @@
+import random
+
+while True:
+    try:
+        car = int(input('Напишите грузоподъемность машины: '))
+        if car < 100 or car > 700:
+            raise Exception
+        break
+    except Exception:
+        print('Неверно')
+    
+lst = []
+for i in range(20):
+    lst.append(random.randint(int(car * 0.1),int(car * 0.25)))
+print(lst)
+print()
+
+temp_lst = []
+_max = 0
+for i in lst:
+    
+    if _max + i> car:
+        print(temp_lst)
+        print(_max)
+        temp_lst = []
+        _max = 0
+    else:
+        _max += i
+        temp_lst.append(i)
