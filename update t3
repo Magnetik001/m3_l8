@@ -1,12 +1,12 @@
-symbols = ['!','?','.',',','-','@','#','$','%','^','*','(',')','№',';',':','_','+','+','/','&']
+alpav = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
 while True:
     try:
         name = input('Enter your name: ')
         for i in name:
-            if i in symbols:
+            if i.lower() not in alpav:
                 raise Exception
-        if len(name) > 10 or name[0] != name[0].upper() or name.isdigit() == True:
+        if len(name) > 10 or name[0] != name[0].upper():
             raise Exception
         print(name)
         break
@@ -23,4 +23,3 @@ while True:
         print('age was entered incorrectly')
     
 print(name,age)
-    
