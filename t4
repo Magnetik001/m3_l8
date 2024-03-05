@@ -1,5 +1,6 @@
 import random
 
+
 while True:
     try:
         car = int(input('Напишите грузоподъемность машины: '))
@@ -15,15 +16,22 @@ for i in range(20):
 print(lst)
 print()
 
+
 temp_lst = []
+main_dct = []
 _max = 0
 for i in lst:
     
-    if _max + i> car:
+    if _max + i > car:
+
         print(temp_lst)
         print(_max)
         temp_lst = []
         _max = 0
-    else:
         _max += i
         temp_lst.append(i)
+        continue
+    _max += i
+    temp_lst.append(i)
+print(temp_lst)
+print(_max)
