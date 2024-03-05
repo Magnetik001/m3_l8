@@ -1,1 +1,18 @@
+import collections
+import random
+
+start_lst = ['Ян', 'Аня', 'Витя', 'Игорь','Богдан']
+lst = []
+for i in range(50):
+    lst.append(random.choice(start_lst))
+
+dct = collections.Counter(lst)
+names = ''
+keys = ''
+for name,key in dct.items():
+    names += name+' '
+    spaces = ' '*(len(name) - len(str(key)))
+    keys += str(key)+spaces+' '
+print(names)
+print(keys)
 
